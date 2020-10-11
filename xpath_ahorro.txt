@@ -1,0 +1,6 @@
+https://www.fahorro.com/medicamentos.html
+PRODUCT_LINKS= $x('//dd[@class="odd"]/ol/li/a/@href').map(x => x.value)
+PRODUCT_CATEGORY= $x('//dd[@class="odd"]/ol/li/a/text()').map(x => x.wholeText)
+
+PRODUCT_NAME = $x('//ul/li/div/h2/a/text()').map(x => x.wholeText)
+PRICE = $x('//div[@class="price-box"]/span/span/text()').map(x => x.wholeText)
